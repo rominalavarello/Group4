@@ -96,6 +96,3 @@ for rectangle,temp in zip(grid,temps):
 canvas.set_extent([-20037508.34,-20048966.1,20037508.34,20048966.1])
 canvas.show()
 
-
-    
-    
