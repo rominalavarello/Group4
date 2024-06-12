@@ -1,13 +1,13 @@
 from pyqgis_scripting_ext.core import *
 
 
-folder = "/Users/rominalavarello/Downloads/"
-# folder = r"C:\Users\laura\OneDrive - Scientific Network South Tyrol\Documents\Master\Semester2\3.advanced geomatics\"
-# folder = "C:/Users/Michele/OneDrive - Scientific Network South Tyrol/EMMA/Year 1/Advanced geomatics/"
-# folder = r"C:\Users\miria\OneDrive - Scientific Network South Tyrol\Semester 2\Advanced Geomatics\"
+folder = "/Users/rominalavarello/Downloads"
+# folder = r"C:\Users\laura\OneDrive - Scientific Network South Tyrol\Documents\Master\Semester2\3.advanced geomatics"
+# folder = "C:/Users/Michele/OneDrive - Scientific Network South Tyrol/EMMA/Year 1/Advanced geomatics"
+# folder = r"C:\Users\miria\OneDrive - Scientific Network South Tyrol\Semester 2\Advanced Geomatics"
 
-csvpath = folder + "test/22yr_T10MN"
-gpkgPATH = folder + "natural_earth_vector.gpkg/packages/natural_earth_vector.gpkg"
+csvpath = folder + "/test/22yr_T10MN"
+gpkgPATH = folder + "/natural_earth_vector.gpkg/packages/natural_earth_vector.gpkg"
 
 with open(csvpath,'r') as file:
     lines = file.readlines()
