@@ -2,8 +2,10 @@ from pyqgis_scripting_ext.core import *
 
 # ------------------------ FOLDERS -----------------------
 
-outputfolder = r"C:\Users\laura\OneDrive - Scientific Network South Tyrol\Documents\Master\Semester2\3.advanced geomatics\output"
-geopackageFolder = r"C:\Users\laura\OneDrive - Scientific Network South Tyrol\Documents\Master\Semester2\3.advanced geomatics\natural_earth_vector.gpkg\packages\natural_earth_vector.gpkg"
+#outputfolder = r"C:\Users\laura\OneDrive - Scientific Network South Tyrol\Documents\Master\Semester2\3.advanced geomatics\output"
+#geopackageFolder = r"C:\Users\laura\OneDrive - Scientific Network South Tyrol\Documents\Master\Semester2\3.advanced geomatics\natural_earth_vector.gpkg\packages\natural_earth_vector.gpkg"
+outputfolder = "/Users/rominalavarello/Desktop/EXAM"
+geopackageFolder = "/Users/rominalavarello/Downloads/natural_earth_vector.gpkg/packages/natural_earth_vector.gpkg"
 
 # ------------------------ CLEAN -------------------------
 
