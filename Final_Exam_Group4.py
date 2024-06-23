@@ -104,7 +104,7 @@ print(len(saved_names))
 
 # --------------- DUMP TO GEOPACKAGE -----------------------
 
-path = folder + "/Lakes.gpkg"
+path = outputfolder + "/Lakes.gpkg"
 error = LakesLayer.dump_to_gpkg(path, overwrite=True)
 if(error):
     print(error)
@@ -134,6 +134,8 @@ styles = [
     HMarker("circle",1) + HFill("black") + HStroke("black",0.5),
 ]
 
+#labelstlye = HLabel("name") + HHalo("white",1)
+#LakesLayer.set_graduated_style('Area', ranges, styles, labelstyle)
 LakesLayer.set_graduated_style('Area', ranges, styles)
 
 
