@@ -6,6 +6,10 @@ from pyqgis_scripting_ext.core import *
 #geopackageFolder = r"C:\Users\laura\OneDrive - Scientific Network South Tyrol\Documents\Master\Semester2\3.advanced geomatics\natural_earth_vector.gpkg\packages\natural_earth_vector.gpkg"
 outputfolder = "/Users/rominalavarello/Desktop/EXAM"
 geopackageFolder = "/Users/rominalavarello/Downloads/natural_earth_vector.gpkg/packages/natural_earth_vector.gpkg"
+#outputfolder = r"C:\Users\miria\OneDrive - Scientific Network South Tyrol\Semester 2\Advanced Geomatics\Exam"
+#geopackageFolder = r"C:\Users\miria\OneDrive - Scientific Network South Tyrol\Semester 2\Advanced Geomatics\natural_earth_vector.gpkg\packages\natural_earth_vector.gpkg"
+#outputfolder = r"C:/Users/Michele/OneDrive - Scientific Network South Tyrol/EMMA/Year 1/Advanced geomatics/output"
+#geopackageFolder = folder2 = r"C:/Users/Michele/OneDrive - Scientific Network South Tyrol/EMMA/Year 1/Advanced geomatics/packages/natural_earth_vector.gpkg"
 
 # ------------------------ CLEAN -------------------------
 
@@ -175,7 +179,7 @@ printer.add_legend(**legendProperties)
     
 labelProperties={
         "x":105,
-        "y":10,
+        "y":8,
         "text":"LAKES in Germany and Italy",
         "bold":True,
         "font_size":20
