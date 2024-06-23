@@ -181,7 +181,15 @@ labelProperties={
         "font_size":20
     }
 printer.add_label(**labelProperties)
-    
+
+scalebarProperties = {
+    'x': 10,
+    'y': 190,
+    'units': "km",
+    'segments': 4,
+    'style': "Single Box",
+}
+printer.add_scalebar(**scalebarProperties)
 
 imageName= f"LakesMapLayout.png"
 imagePath = f"{outputfolder}/{imageName}"
