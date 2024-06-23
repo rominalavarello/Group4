@@ -99,7 +99,7 @@ for i, (coord, name, area, elevation) in enumerate(zip(newcoords, names, areas, 
         LakesLayer.add_feature(newcoords[i],[names[i],areas[i],elevations[i]])
         saved_names.append(name)
 
-print(len(saved_names))
+#print(len(saved_names))
 
 
 # --------------- DUMP TO GEOPACKAGE -----------------------
@@ -134,7 +134,7 @@ styles = [
     HMarker("circle",1) + HFill("black") + HStroke("black",0.5),
 ]
 
-#labelstlye = HLabel("name") + HHalo("white",1)
+#labelstyle = HLabel("name") + HHalo("white",1)
 #LakesLayer.set_graduated_style('Area', ranges, styles, labelstyle)
 LakesLayer.set_graduated_style('Area', ranges, styles)
 
@@ -210,6 +210,7 @@ for i, (coord, name, area, elevation) in enumerate(zip(newcoords, names, areas, 
         else:
             all_others.append(name)
 
+print("Total number of lakes:")
 print(len(saved_names))
 print("Lakes above 2000 masl:")
 print(len(lakesabove2000))
