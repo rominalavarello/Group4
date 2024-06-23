@@ -182,6 +182,16 @@ labelProperties={
     }
 printer.add_label(**labelProperties)
 
+subtitleProperties={
+        "x":97,
+        "y":17,
+        "text":"by: Miriam Färber, Romina Lavarello, Luisa Menestrina, Laura Morass",
+        "bold":False,
+        "italic":True,
+        "font_size":10
+    }
+printer.add_label(**subtitleProperties)
+
 scalebarProperties = {
     'x': 10,
     'y': 190,
