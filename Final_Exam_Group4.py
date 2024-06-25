@@ -6,6 +6,10 @@ from pyqgis_scripting_ext.core import *
 #geopackageFolder = r"C:\Users\laura\OneDrive - Scientific Network South Tyrol\Documents\Master\Semester2\3.advanced geomatics\natural_earth_vector.gpkg\packages\natural_earth_vector.gpkg"
 outputfolder = "/Users/rominalavarello/Desktop/EXAM"
 geopackageFolder = "/Users/rominalavarello/Downloads/natural_earth_vector.gpkg/packages/natural_earth_vector.gpkg"
+#outputfolder = r"C:\Users\miria\OneDrive - Scientific Network South Tyrol\Semester 2\Advanced Geomatics\Exam"
+#geopackageFolder = r"C:\Users\miria\OneDrive - Scientific Network South Tyrol\Semester 2\Advanced Geomatics\natural_earth_vector.gpkg\packages\natural_earth_vector.gpkg"
+#outputfolder = r"C:/Users/Michele/OneDrive - Scientific Network South Tyrol/EMMA/Year 1/Advanced geomatics/output"
+#geopackageFolder = folder2 = r"C:/Users/Michele/OneDrive - Scientific Network South Tyrol/EMMA/Year 1/Advanced geomatics/packages/natural_earth_vector.gpkg"
 
 # ------------------------ CLEAN -------------------------
 
@@ -99,7 +103,7 @@ for i, (coord, name, area, elevation) in enumerate(zip(newcoords, names, areas, 
         LakesLayer.add_feature(newcoords[i],[names[i],areas[i],elevations[i]])
         saved_names.append(name)
 
-print(len(saved_names))
+#print(len(saved_names))
 
 
 # --------------- DUMP TO GEOPACKAGE -----------------------
@@ -134,7 +138,7 @@ styles = [
     HMarker("circle",1) + HFill("black") + HStroke("black",0.5),
 ]
 
-#labelstlye = HLabel("name") + HHalo("white",1)
+#labelstyle = HLabel("name") + HHalo("white",1)
 #LakesLayer.set_graduated_style('Area', ranges, styles, labelstyle)
 LakesLayer.set_graduated_style('Area', ranges, styles)
 
@@ -175,13 +179,31 @@ printer.add_legend(**legendProperties)
     
 labelProperties={
         "x":105,
-        "y":10,
+        "y":8,
         "text":"LAKES in Germany and Italy",
         "bold":True,
         "font_size":20
     }
 printer.add_label(**labelProperties)
-    
+
+subtitleProperties={
+        "x":97,
+        "y":17,
+        "text":"by: Miriam Färber, Romina Lavarello, Luisa Menestrina, Laura Morass",
+        "bold":False,
+        "italic":True,
+        "font_size":10
+    }
+printer.add_label(**subtitleProperties)
+
+scalebarProperties = {
+    'x': 10,
+    'y': 190,
+    'units': "km",
+    'segments': 4,
+    'style': "Single Box",
+}
+printer.add_scalebar(**scalebarProperties)
 
 imageName= f"LakesMapLayout.png"
 imagePath = f"{outputfolder}/{imageName}"
@@ -210,6 +232,7 @@ for i, (coord, name, area, elevation) in enumerate(zip(newcoords, names, areas, 
         else:
             all_others.append(name)
 
+print("Total number of lakes:")
 print(len(saved_names))
 print("Lakes above 2000 masl:")
 print(len(lakesabove2000))
